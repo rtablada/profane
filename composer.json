@@ -1,6 +1,6 @@
 {
     "name": "rtablada/profane",
-    "description": "",
+    "description": "Profanity filtering package for Laravel 4",
     "authors": [
         {
             "name": "Ryan Tablada",
@@ -16,5 +16,6 @@
             "Rtablada\\Profane": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "license": "MIT"
 }
