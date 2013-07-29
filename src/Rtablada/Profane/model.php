@@ -23,8 +23,8 @@ abstract class Model extends Eloquent
 	 */
 	public function setAttribute($key, $value)
 	{
-		if (array_key_exists($key, $this->filtered)) {
-			$value = Filter::filter($value, $this->filterReplace);
+		if (in_array($key, $this->filtered)) {
+			$value = \Filter::filter($value, $this->filterReplace);
 		}
 
 		parent::setAttribute($key, $value);
