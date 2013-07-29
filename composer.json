@@ -1,6 +1,12 @@
 {
     "name": "rtablada/profane",
     "description": "Profanity filtering package for Laravel 4",
+    "keywords": [
+        "laravel",
+        "profane",
+        "profanity",
+        "lpm"
+    ],
     "authors": [
         {
             "name": "Ryan Tablada",
