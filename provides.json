@@ -1,0 +1,15 @@
+{
+	"providers": [
+		"Rtablada\Profane\FilterServiceProvider"
+	],
+	"aliases": [
+		{
+			"alias": "Filter",
+			"facade": "Rtablada\Profane\Facades\Filter"
+		},
+		{
+			"alias": "Eloquent",
+			"facade": "Rtablada\Profane\Model"
+		}
+	]
+}
