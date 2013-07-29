@@ -86,5 +86,9 @@ class Filter
 			$regExp .= ')\s/g';
 			$this->regExps[] = $regExp;
 		}
+
+		if (Config::get('profane::cached')) {
+			Cache::forever('profane::regExps', $this->regExps);
+		}
 	}
 }
