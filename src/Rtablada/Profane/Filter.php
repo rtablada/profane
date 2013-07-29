@@ -69,20 +69,20 @@ class Filter
 	{
 		$this->regExps = array();
 
-		$regExp = '/(';
+		$regExp = '/\s(';
 		for ($i=0; $i < count($this->words); $i++) {
 			$word = $this->words[$i];
 			$regExp .= $word;
 			if ($i % $this->wordsPerExp == 0 && $i != 0) {
-				$regExp .= ')/';
+				$regExp .= ')\s/g';
 				$this->regExps[] = $regExp;
-				$regExp = '/(';
+				$regExp = '/\s(';
 			} else {
 				$regExp .= '|';
 			}
 		}
-		if ($regExp == '/(') {
-			$regExp .= ')/';
+		if ($regExp == '/\s(') {
+			$regExp .= ')\s/g';
 			$this->regExps[] = $regExp;
 		}
 	}
