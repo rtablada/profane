@@ -11,6 +11,11 @@ class FilterServiceProvider extends ServiceProvider {
 	 */
 	protected $defer = false;
 
+	public function boot()
+	{
+		$this->package('rtablada/profane');
+	}
+
 	/**
 	 * Register the service provider.
 	 *

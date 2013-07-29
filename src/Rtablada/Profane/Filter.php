@@ -28,7 +28,7 @@ class Filter
 	 */
 	public function __construct()
 	{
-		$this->words = Config::get('profane.words');
+		$this->words = Config::get('profane::words');
 		$this->fetchRegExps();
 	}
 
