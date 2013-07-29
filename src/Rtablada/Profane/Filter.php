@@ -35,12 +35,13 @@ class Filter
 	public function filter($string, $replacement = '')
 	{
 		$replacement = $replacement ? " {$replacement} " : ' ';
+		$string = " {$string} ";
 		foreach ($this->regExps as $regExp) {
 			$string = preg_replace($regExp, $replacement, $string);
 			var_dump($regExp);
 		}
 
-		return $string;
+		return trim($string);
 	}
 
 	/**
