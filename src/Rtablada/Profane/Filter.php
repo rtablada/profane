@@ -75,7 +75,7 @@ class Filter
 			$word = $this->words[$i];
 			$regExp .= $word;
 			if ($i % $this->wordsPerExp == 0 && $i != 0) {
-				$regExp .= ')\s/g';
+				$regExp .= ')\s/';
 				$this->regExps[] = $regExp;
 				$regExp = '/\s(';
 			} else {
