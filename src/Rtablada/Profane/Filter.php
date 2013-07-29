@@ -38,7 +38,6 @@ class Filter
 		$string = " {$string} ";
 		foreach ($this->regExps as $regExp) {
 			$string = preg_replace($regExp, $replacement, $string);
-			var_dump($regExp);
 		}
 
 		return trim($string);
