@@ -15,8 +15,8 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.0.x",
-        "illuminate/database": "4.0.x"
+        "illuminate/support": "~4",
+        "illuminate/database": "~4"
     },
     "autoload": {
         "psr-0": {
