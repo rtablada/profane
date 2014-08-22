@@ -48,25 +48,25 @@ class Filter
 	{
 		// Check if we are caching.
 		if (Config::get('profane::cached') && Cache::has('profane::regExps')) {
-      
-      $this->regExps = Cache::get('profane::regExps');
-      
+			
+			$this->regExps = Cache::get('profane::regExps');
+		
 		} else {
-      
+			
 			$this->createRegExps();
-      
+			
 		}
 	}
 
 
 	protected function createRegExps()
 	{
-    $this->words = Config::get('profane::words');
+		$this->words = Config::get('profane::words');
 
 		foreach(array_chunk($this->words, $this->wordsPerExp) as $words)
-    {
-      $this->regExps[] = '/\b(' . implode('|', $words) . ')\b/i';
-    }
+		{
+			$this->regExps[] = '/\b(' . implode('|', $words) . ')\b/i';
+		}
 
 		if (Config::get('profane::cached')) {
 			Cache::forever('profane::regExps', $this->regExps);
