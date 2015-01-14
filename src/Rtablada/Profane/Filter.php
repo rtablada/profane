@@ -75,15 +75,15 @@ class Filter
 			$word = $this->words[$i];
 			$regExp .= $word;
 			if ($i % $this->wordsPerExp == 0 && $i != 0) {
-				$regExp .= ')\s*/i';
+				$regExp .= ')\s*(?![a-zA-Z])/i';
 				$this->regExps[] = $regExp;
-				$regExp = '/\s*(';
+				$regExp = '/(?<![a-zA-Z])\s*(';
 			} else {
 				$regExp .= '|';
 			}
 		}
-		if ($regExp == '/\s*(') {
-			$regExp .= ')\s*/gi';
+		if ($regExp == '/(?<![a-zA-Z])\s*(') {
+			$regExp .= ')\s*(?![a-zA-Z])/gi';
 			$this->regExps[] = $regExp;
 		}
 
