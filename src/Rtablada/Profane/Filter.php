@@ -70,7 +70,7 @@ class Filter
 	{
 		$this->regExps = array();
 
-		$regExp = '/\s*(';
+		$regExp = '/(?<![a-zA-Z])\s*(';
 		for ($i=0; $i < count($this->words); $i++) {
 			$word = $this->words[$i];
 			$regExp .= $word;
